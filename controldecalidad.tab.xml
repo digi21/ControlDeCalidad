@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xml" href="#style1"?>
+<!DOCTYPE digittab [
+	<!ATTLIST xsl:stylesheet
+		id ID #REQUIRED>
+]>
+<digitab xmlns:odt="http://schemas.digi21.net/DigiNG/DigiTab/StyleOldDigiTab/v1.0" xmlns:ccc="http://schemas.digi21.net/DigiNG/Desencadenadores/v1.0" xmlns:modeloSemantico="http://schemas.digi21.net/DigiNG/ModeloSemantico/v1.0" xmlns:iobin="http://schemas.digi21.net/DigiNG/IO/bin/v1.0" xmlns:iobind="http://schemas.digi21.net/DigiNG/IO/bind/v1.0" xmlns:iocsv="http://schemas.digi21.net/DigiNG/IO/csv/v1.0" xmlns:iodgn="http://schemas.digi21.net/DigiNG/IO/dgnv8/v1.0" xmlns:iodwg="http://schemas.digi21.net/DigiNG/IO/dwg/v1.0" xmlns:ioGeomedia="http://schemas.digi21.net/DigiNG/IO/Geomedia/v1.0" xmlns:iokml="http://schemas.digi21.net/DigiNG/IO/kml/v1.0" xmlns:ioPostGis="http://schemas.digi21.net/DigiNG/IO/PostGis/v1.0" xmlns:ioshp="http://schemas.digi21.net/DigiNG/IO/ShapeFile/v1.0" xmlns:iosvg="http://schemas.digi21.net/DigiNG/IO/Svg/v1.0"  bgColor="20 20 20" colorUnknown="26 2 0" colorSnap="1 0 0">
+<xsl:stylesheet version="1.0"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                id="style1">
+  <xsl:template match="/">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <title>Archivo de tabla de códigos</title>
+        <style type="text/css">
+          tr:nth-child(even) { background: #cccccc; }
+          body { font-family:Verdana; font-size:small}
+        </style>
+      </head>
+      <body>
+        <h3>Archivo de tabla de códigos</h3>
+        <p>Este archivo define códigos, así como su representación y transformación a distintos formatos de archivo de dibujo.</p>
+
+        <table>
+          <tr>
+            <th>Código</th>
+            <th>Descripción</th>
+          </tr>
+
+          <xsl:for-each select="/digitab/codes/code">
+            <tr>
+              <td>
+                <xsl:value-of select="@name"/>
+              </td>
+              <td>
+                <xsl:value-of select="@description"/>
+              </td>
+            </tr>
+          </xsl:for-each>
+        </table>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
+			<referenceAssemblies><![CDATA[mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Digi21.DigiNG, Version=17.3.0.0, Culture=neutral, PublicKeyToken=6751d7d8a775bb8c
+]]>			</referenceAssemblies>
+			<commandsWhenSelectingCode><![CDATA[
+C=0
+S=0
+IR_PRINCIPIO=0
+ORTO=0
+ORTO_AA=0
+FIJAZ=0
+MAXPUNTOS=0
+FORMATO_AUTONUM=%d
+TIPO_DE_Z=2
+BLOQUEA_Z=0
+]]>			</commandsWhenSelectingCode>
+			<commandsWhenOpeningDrawingWindow><![CDATA[
+zoome
+]]>			</commandsWhenOpeningDrawingWindow>
+			<macroinstructions>			</macroinstructions>
+			<speechRecognition>			</speechRecognition>
+			<menuDigi>			</menuDigi>
+	<palette name="Screen" darkening="100">
+		<color index="0" rgb="0 0 0"/>
+		<color index="1" rgb="0 0 168"/>
+		<color index="2" rgb="0 168 0"/>
+		<color index="3" rgb="0 168 168"/>
+		<color index="4" rgb="168 0 0"/>
+		<color index="5" rgb="168 0 168"/>
+		<color index="6" rgb="168 84 0"/>
+		<color index="7" rgb="168 168 168"/>
+		<color index="8" rgb="84 84 84"/>
+		<color index="9" rgb="84 84 252"/>
+		<color index="10" rgb="84 252 84"/>
+		<color index="11" rgb="84 252 252"/>
+		<color index="12" rgb="252 84 84"/>
+		<color index="13" rgb="252 84 252"/>
+		<color index="14" rgb="252 252 84"/>
+		<color index="15" rgb="252 252 252"/>
+		<color index="16" rgb="0 0 0"/>
+		<color index="17" rgb="20 20 20"/>
+		<color index="18" rgb="32 32 32"/>
+		<color index="19" rgb="44 44 44"/>
+		<color index="20" rgb="56 56 56"/>
+		<color index="21" rgb="68 68 68"/>
+		<color index="22" rgb="80 80 80"/>
+		<color index="23" rgb="96 96 96"/>
+		<color index="24" rgb="112 112 112"/>
+		<color index="25" rgb="128 128 128"/>
+		<color index="26" rgb="144 144 144"/>
+		<color index="27" rgb="160 160 160"/>
+		<color index="28" rgb="180 180 180"/>
+		<color index="29" rgb="200 200 200"/>
+		<color index="30" rgb="224 224 224"/>
+		<color index="31" rgb="252 252 252"/>
+		<color index="32" rgb="0 0 252"/>
+		<color index="33" rgb="64 0 252"/>
+		<color index="34" rgb="124 0 252"/>
+		<color index="35" rgb="188 0 252"/>
+		<color index="36" rgb="252 0 252"/>
+		<color index="37" rgb="252 0 188"/>
+		<color index="38" rgb="252 0 124"/>
+		<color index="39" rgb="252 0 64"/>
+		<color index="40" rgb="252 0 0"/>
+		<color index="41" rgb="252 64 0"/>
+		<color index="42" rgb="252 124 0"/>
+		<color index="43" rgb="252 188 0"/>
+		<color index="44" rgb="252 252 0"/>
+		<color index="45" rgb="188 252 0"/>
+		<color index="46" rgb="124 252 0"/>
+		<color index="47" rgb="64 252 0"/>
+		<color index="48" rgb="0 252 0"/>
+		<color index="49" rgb="0 252 64"/>
+		<color index="50" rgb="0 252 124"/>
+		<color index="51" rgb="0 252 188"/>
+		<color index="52" rgb="0 252 252"/>
+		<color index="53" rgb="0 188 252"/>
+		<color index="54" rgb="0 124 252"/>
+		<color index="55" rgb="0 64 252"/>
+		<color index="56" rgb="124 124 252"/>
+		<color index="57" rgb="156 124 252"/>
+		<color index="58" rgb="188 124 252"/>
+		<color index="59" rgb="220 124 252"/>
+		<color index="60" rgb="252 124 252"/>
+		<color index="61" rgb="252 124 220"/>
+		<color index="62" rgb="252 124 188"/>
+		<color index="63" rgb="252 124 156"/>
+		<color index="64" rgb="252 124 124"/>
+		<color index="65" rgb="252 156 124"/>
+		<color index="66" rgb="252 188 124"/>
+		<color index="67" rgb="252 220 124"/>
+		<color index="68" rgb="252 252 124"/>
+		<color index="69" rgb="220 252 124"/>
+		<color index="70" rgb="188 252 124"/>
+		<color index="71" rgb="156 252 124"/>
+		<color index="72" rgb="124 252 124"/>
+		<color index="73" rgb="124 252 156"/>
+		<color index="74" rgb="124 252 188"/>
+		<color index="75" rgb="124 252 220"/>
+		<color index="76" rgb="124 252 252"/>
+		<color index="77" rgb="124 220 252"/>
+		<color index="78" rgb="124 188 252"/>
+		<color index="79" rgb="124 156 252"/>
+		<color index="80" rgb="180 180 252"/>
+		<color index="81" rgb="196 180 252"/>
+		<color index="82" rgb="216 180 252"/>
+		<color index="83" rgb="232 180 252"/>
+		<color index="84" rgb="252 180 252"/>
+		<color index="85" rgb="252 180 232"/>
+		<color index="86" rgb="252 180 216"/>
+		<color index="87" rgb="252 180 196"/>
+		<color index="88" rgb="252 180 180"/>
+		<color index="89" rgb="252 196 180"/>
+		<color index="90" rgb="252 216 180"/>
+		<color index="91" rgb="252 232 180"/>
+		<color index="92" rgb="252 252 180"/>
+		<color index="93" rgb="232 252 180"/>
+		<color index="94" rgb="216 252 180"/>
+		<color index="95" rgb="196 252 180"/>
+		<color index="96" rgb="180 252 180"/>
+		<color index="97" rgb="180 252 196"/>
+		<color index="98" rgb="180 252 216"/>
+		<color index="99" rgb="180 252 232"/>
+		<color index="100" rgb="180 252 252"/>
+		<color index="101" rgb="180 232 252"/>
+		<color index="102" rgb="180 216 252"/>
+		<color index="103" rgb="180 196 252"/>
+		<color index="104" rgb="0 0 112"/>
+		<color index="105" rgb="28 0 112"/>
+		<color index="106" rgb="56 0 112"/>
+		<color index="107" rgb="84 0 112"/>
+		<color index="108" rgb="112 0 112"/>
+		<color index="109" rgb="112 0 84"/>
+		<color index="110" rgb="112 0 56"/>
+		<color index="111" rgb="112 0 28"/>
+		<color index="112" rgb="112 0 0"/>
+		<color index="113" rgb="112 28 0"/>
+		<color index="114" rgb="112 56 0"/>
+		<color index="115" rgb="112 84 0"/>
+		<color index="116" rgb="112 112 0"/>
+		<color index="117" rgb="84 112 0"/>
+		<color index="118" rgb="56 112 0"/>
+		<color index="119" rgb="28 112 0"/>
+		<color index="120" rgb="0 112 0"/>
+		<color index="121" rgb="0 112 28"/>
+		<color index="122" rgb="0 112 56"/>
+		<color index="123" rgb="0 112 84"/>
+		<color index="124" rgb="0 112 112"/>
+		<color index="125" rgb="0 84 112"/>
+		<color index="126" rgb="0 56 112"/>
+		<color index="127" rgb="0 28 112"/>
+		<color index="128" rgb="56 56 112"/>
+		<color index="129" rgb="68 56 112"/>
+		<color index="130" rgb="84 56 112"/>
+		<color index="131" rgb="96 56 112"/>
+		<color index="132" rgb="112 56 112"/>
+		<color index="133" rgb="112 56 96"/>
+		<color index="134" rgb="112 56 84"/>
+		<color index="135" rgb="112 56 68"/>
+		<color index="136" rgb="112 56 56"/>
+		<color index="137" rgb="112 68 56"/>
+		<color index="138" rgb="112 84 56"/>
+		<color index="139" rgb="112 96 56"/>
+		<color index="140" rgb="112 112 56"/>
+		<color index="141" rgb="96 112 56"/>
+		<color index="142" rgb="84 112 56"/>
+		<color index="143" rgb="68 112 56"/>
+		<color index="144" rgb="56 112 56"/>
+		<color index="145" rgb="56 112 68"/>
+		<color index="146" rgb="56 112 84"/>
+		<color index="147" rgb="56 112 96"/>
+		<color index="148" rgb="56 112 112"/>
+		<color index="149" rgb="56 96 112"/>
+		<color index="150" rgb="56 84 112"/>
+		<color index="151" rgb="56 68 112"/>
+		<color index="152" rgb="80 80 112"/>
+		<color index="153" rgb="88 80 112"/>
+		<color index="154" rgb="96 80 112"/>
+		<color index="155" rgb="104 80 112"/>
+		<color index="156" rgb="112 80 112"/>
+		<color index="157" rgb="112 80 104"/>
+		<color index="158" rgb="112 80 96"/>
+		<color index="159" rgb="112 80 88"/>
+		<color index="160" rgb="112 80 80"/>
+		<color index="161" rgb="112 88 80"/>
+		<color index="162" rgb="112 96 80"/>
+		<color index="163" rgb="112 104 80"/>
+		<color index="164" rgb="112 112 80"/>
+		<color index="165" rgb="104 112 80"/>
+		<color index="166" rgb="96 112 80"/>
+		<color index="167" rgb="88 112 80"/>
+		<color index="168" rgb="80 112 80"/>
+		<color index="169" rgb="80 112 88"/>
+		<color index="170" rgb="80 112 96"/>
+		<color index="171" rgb="80 112 104"/>
+		<color index="172" rgb="80 112 112"/>
+		<color index="173" rgb="80 104 112"/>
+		<color index="174" rgb="80 96 112"/>
+		<color index="175" rgb="80 88 112"/>
+		<color index="176" rgb="0 0 64"/>
+		<color index="177" rgb="16 0 64"/>
+		<color index="178" rgb="32 0 64"/>
+		<color index="179" rgb="48 0 64"/>
+		<color index="180" rgb="64 0 64"/>
+		<color index="181" rgb="64 0 48"/>
+		<color index="182" rgb="64 0 32"/>
+		<color index="183" rgb="64 0 16"/>
+		<color index="184" rgb="64 0 0"/>
+		<color index="185" rgb="64 16 0"/>
+		<color index="186" rgb="64 32 0"/>
+		<color index="187" rgb="64 48 0"/>
+		<color index="188" rgb="64 64 0"/>
+		<color index="189" rgb="48 64 0"/>
+		<color index="190" rgb="32 64 0"/>
+		<color index="191" rgb="16 64 0"/>
+		<color index="192" rgb="0 64 0"/>
+		<color index="193" rgb="0 64 16"/>
+		<color index="194" rgb="0 64 32"/>
+		<color index="195" rgb="0 64 48"/>
+		<color index="196" rgb="0 64 64"/>
+		<color index="197" rgb="0 48 64"/>
+		<color index="198" rgb="0 32 64"/>
+		<color index="199" rgb="0 16 64"/>
+		<color index="200" rgb="32 32 64"/>
+		<color index="201" rgb="40 32 64"/>
+		<color index="202" rgb="48 32 64"/>
+		<color index="203" rgb="56 32 64"/>
+		<color index="204" rgb="64 32 64"/>
+		<color index="205" rgb="64 32 56"/>
+		<color index="206" rgb="64 32 48"/>
+		<color index="207" rgb="64 32 40"/>
+		<color index="208" rgb="64 32 32"/>
+		<color index="209" rgb="64 40 32"/>
+		<color index="210" rgb="64 48 32"/>
+		<color index="211" rgb="64 56 32"/>
+		<color index="212" rgb="64 64 32"/>
+		<color index="213" rgb="56 64 32"/>
+		<color index="214" rgb="48 64 32"/>
+		<color index="215" rgb="40 64 32"/>
+		<color index="216" rgb="32 64 32"/>
+		<color index="217" rgb="32 64 40"/>
+		<color index="218" rgb="32 64 48"/>
+		<color index="219" rgb="32 64 56"/>
+		<color index="220" rgb="32 64 64"/>
+		<color index="221" rgb="32 56 64"/>
+		<color index="222" rgb="32 48 64"/>
+		<color index="223" rgb="32 40 64"/>
+		<color index="224" rgb="44 44 64"/>
+		<color index="225" rgb="48 44 64"/>
+		<color index="226" rgb="52 44 64"/>
+		<color index="227" rgb="60 44 64"/>
+		<color index="228" rgb="64 44 64"/>
+		<color index="229" rgb="64 44 60"/>
+		<color index="230" rgb="64 44 52"/>
+		<color index="231" rgb="64 44 48"/>
+		<color index="232" rgb="64 44 44"/>
+		<color index="233" rgb="64 48 44"/>
+		<color index="234" rgb="64 52 44"/>
+		<color index="235" rgb="64 60 44"/>
+		<color index="236" rgb="64 64 44"/>
+		<color index="237" rgb="60 64 44"/>
+		<color index="238" rgb="52 64 44"/>
+		<color index="239" rgb="48 64 44"/>
+		<color index="240" rgb="44 64 44"/>
+		<color index="241" rgb="44 64 48"/>
+		<color index="242" rgb="44 64 52"/>
+		<color index="243" rgb="44 64 60"/>
+		<color index="244" rgb="44 64 64"/>
+		<color index="245" rgb="44 60 64"/>
+		<color index="246" rgb="44 52 64"/>
+		<color index="247" rgb="44 48 64"/>
+		<color index="248" rgb="0 0 0"/>
+		<color index="249" rgb="0 0 0"/>
+		<color index="250" rgb="0 0 0"/>
+		<color index="251" rgb="0 0 0"/>
+		<color index="252" rgb="0 0 0"/>
+		<color index="253" rgb="0 0 0"/>
+		<color index="254" rgb="0 0 0"/>
+		<color index="255" rgb="0 0 0"/>
+	</palette>
+	<styles>
+		<style name="" description="">
+			<odt:representation/>
+		</style>
+	</styles>
+<databaseSchema>
+</databaseSchema>
+	<modeloSemantico:semanticModel>
+	</modeloSemantico:semanticModel>
+	<codes>
+		<code name="poste" description="" priority="0" tags="" alias="" type="0" helpFile="" table="" conditions="" enabled="1" print="1" streamMode="0" applySemanticModel="1">
+			<trigger language="CSharp"><![CDATA[
+using System;
+using System.Collections.Generic;
+using Digi21.DigiNG.DigiTab;
+using Digi21.DigiNG.Entities;
+
+namespace controldecalidad
+{
+    public class DebeSerPunto : ITrigger
+    {
+        public Entity AnalyzeEntity(Entity entity, IDictionary<string, IDictionary<string, object>> databaseAttributes, bool addingEntity)
+        {
+            if( entity is ReadOnlyPoint )
+                return entity;
+
+            throw new AggregateException(new GeometryException("Esta geometría debería ser de tipo punto"));
+        }
+    }
+}
+]]>			</trigger>
+			<representation style="" color="15" color-stereo="107" width="1" width-stereo="1" print-color="0" print-width="0.010000" print-height="1" fontTT="Verdana" charSet="0" weightTT="0" italic="0" />
+			<io>
+				<iobin:transform code="poste"/>
+				<iobind:transform code="poste"/>
+				<iocsv:transform type="0" />
+				<iodgn:transform level="poste" colorEntity="-1" styleEntity="-1" weightEntity="-1" gg="0" class="0" color="1" style="1" weight="1" hBit="0" viewIndependent="0" notSnappable="0" useThTw="0" th="1.000000" tw="1.000000" >
+					<iodgn:point type="POINT" cell="" sx="1.000000" sy="1.000000" sz="1.000000" />
+					<iodgn:line type="LINESTRING">
+					</iodgn:line>
+					<iodgn:text font="STANDARD" />
+				</iodgn:transform>
+				<iodwg:transform layer="poste">
+					<iodwg:line type="Polyline3D"/>
+					<iodwg:point type="Point"/>
+					<iodwg:text style="Standard" oblique="0.000000" />
+				</iodwg:transform>
+				<ioGeomedia:transform table="poste" textHeight="1.000000" />
+				<iokml:transform type="0" elevation="0" extrude="0" opacity="255" />
+				<ioPostGis:transform table="poste" textHeight="1.000000" />
+				<ioshp:transform nameSHP="poste" schema="poste" typeNewTable="5" />
+				<iosvg:transform stroke-width="1.000000" stroke="#3b2bb2" stroke-linejoin="miter" stroke-linecap="butt" fill="0" fill-color="#3b2bb2" point-size="1.000000" />
+			</io>
+		</code>
+		<code name="edificio" description="" priority="0" tags="" alias="" type="1" helpFile="" table="" conditions="" enabled="1" print="1" streamMode="0" applySemanticModel="1">
+			<trigger language="CSharp"><![CDATA[
+using System;
+using System.Collections.Generic;
+using Digi21.DigiNG.DigiTab;
+using Digi21.DigiNG.Entities;
+
+namespace controldecalidad
+{
+    public class DebeTenerNumeroParDePuntos : ITrigger
+    {
+        public Entity AnalyzeEntity(Entity entity, IDictionary<string, IDictionary<string, object>> databaseAttributes, bool addingEntity)
+        {
+            if (!(entity is ReadOnlyLine))
+                return entity;
+
+            var linea = entity as ReadOnlyLine;
+
+            if (linea.Points.Count % 2 != 0)
+                throw new AggregateException(new GeometryException("Solo se admiten líneas con un número par de puntos"));
+
+            return entity;
+        }
+    }
+}
+]]>			</trigger>
+			<representation style="" color="12" color-stereo="249" width="1" width-stereo="1" print-color="0" print-width="0.010000" print-height="1" fontTT="Verdana" charSet="0" weightTT="0" italic="0" />
+			<io>
+				<iobin:transform code="edificio"/>
+				<iobind:transform code="edificio"/>
+				<iocsv:transform type="0" />
+				<iodgn:transform level="edificio" colorEntity="-1" styleEntity="-1" weightEntity="-1" gg="0" class="0" color="1" style="1" weight="1" hBit="0" viewIndependent="0" notSnappable="0" useThTw="0" th="1.000000" tw="1.000000" >
+					<iodgn:point type="POINT" cell="" sx="1.000000" sy="1.000000" sz="1.000000" />
+					<iodgn:line type="LINESTRING">
+					</iodgn:line>
+					<iodgn:text font="STANDARD" />
+				</iodgn:transform>
+				<iodwg:transform layer="edificio">
+					<iodwg:line type="Polyline3D"/>
+					<iodwg:point type="Point"/>
+					<iodwg:text style="Standard" oblique="0.000000" />
+				</iodwg:transform>
+				<ioGeomedia:transform table="edificio" textHeight="1.000000" />
+				<iokml:transform type="0" elevation="0" extrude="0" opacity="255" />
+				<ioPostGis:transform table="edificio" textHeight="1.000000" />
+				<ioshp:transform nameSHP="edificio" schema="edificio" typeNewTable="5" />
+				<iosvg:transform stroke-width="1.000000" stroke="#78a22a" stroke-linejoin="miter" stroke-linecap="butt" fill="0" fill-color="#78a22a" point-size="1.000000" />
+			</io>
+		</code>
+	</codes>
+</digitab>
